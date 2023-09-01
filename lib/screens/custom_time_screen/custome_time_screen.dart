@@ -15,14 +15,14 @@ import '../../widget/button_view.dart';
 import '../success_screen.dart';
 import 'custome_time_bloc.dart';
 
-class CustomeTimeScreen extends StatefulWidget {
-  const CustomeTimeScreen({super.key});
+class CustomTimeScreen extends StatefulWidget {
+  const CustomTimeScreen({super.key});
 
   @override
-  State<CustomeTimeScreen> createState() => _CustomeTimeScreenState();
+  State<CustomTimeScreen> createState() => _CustomTimeScreenState();
 }
 
-class _CustomeTimeScreenState extends State<CustomeTimeScreen> {
+class _CustomTimeScreenState extends State<CustomTimeScreen> {
 
   String shitDropDownValue = 'Morning';
 
@@ -94,7 +94,7 @@ class _CustomeTimeScreenState extends State<CustomeTimeScreen> {
                 const SizedBox(height: 20,),
 
 
-                selectCustomeBox(),
+                selectCustomBox(),
 
                 const SizedBox(height: 10,),
 
@@ -114,7 +114,7 @@ class _CustomeTimeScreenState extends State<CustomeTimeScreen> {
     ),);
   }
 
-  Widget  selectCustomeBox(){
+  Widget  selectCustomBox(){
     return Container(decoration: BoxDecoration(color: boxColor,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: boxColor)),child:

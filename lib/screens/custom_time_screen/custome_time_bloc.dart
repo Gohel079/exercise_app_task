@@ -9,10 +9,6 @@ class CustomTimeBloc {
   final ApiRepository _repository = ApiRepository();
 
 
-  CustomTimeBloc() {
-
-  }
-
   customApi(Map<String,dynamic>? data,Function(RecommendedTimeModel) onSuccess)
   {
     _repository.customTime(data,(reponse) {

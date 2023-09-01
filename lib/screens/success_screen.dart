@@ -15,9 +15,9 @@ class _SuccessScreenState extends State<SuccessScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(child: Text('API Call Successfully',
+        child: Text('API Call Successfully',
           style: styleLarge1.copyWith(color: secondaryColor,fontSize: 20,
-              fontWeight: FontWeight.w600),),),
+              fontWeight: FontWeight.w600),),
       ),
     );
   }

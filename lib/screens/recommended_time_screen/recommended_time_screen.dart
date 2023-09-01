@@ -124,9 +124,9 @@ class _RecommendedTimeScreenState extends State<RecommendedTimeScreen> {
 
   @override
   void initState() {
-   first14Day = BehaviorSubject<TimeOfDay>.seeded(TimeOfDay(hour: 08,minute: 00));
-   thenAfter1 = BehaviorSubject<TimeOfDay>.seeded(TimeOfDay(hour: 08,minute: 00));
-   thenAfter2 = BehaviorSubject<TimeOfDay>.seeded(TimeOfDay(hour: 08,minute: 00));
+   first14Day = BehaviorSubject<TimeOfDay>.seeded(const TimeOfDay(hour: 08,minute: 00));
+   thenAfter1 = BehaviorSubject<TimeOfDay>.seeded(const TimeOfDay(hour: 08,minute: 00));
+   thenAfter2 = BehaviorSubject<TimeOfDay>.seeded(const TimeOfDay(hour: 08,minute: 00));
     super.initState();
   }
 
@@ -531,7 +531,7 @@ class _RecommendedTimeScreenState extends State<RecommendedTimeScreen> {
 
   Widget selectCustomeTimeContainer(String mainLabel) {
     return InkWell(onTap: (){
-      Navigator.push(context, CupertinoPageRoute(builder: (context) => CustomeTimeScreen(),));
+      Navigator.push(context, CupertinoPageRoute(builder: (context) => CustomTimeScreen(),));
     },
       child: Container(
         width: double.infinity,

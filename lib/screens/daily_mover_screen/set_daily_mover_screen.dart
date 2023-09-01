@@ -131,7 +131,8 @@ class _SetDailyMoverScreenState extends State<SetDailyMoverScreen> {
           const SizedBox(height: 5,),
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 7),
+            padding: const EdgeInsets.symmetric(horizontal: 5,
+                vertical: 7),
             child: blueBtn(mainLabel),
           ),
 
@@ -140,27 +141,29 @@ class _SetDailyMoverScreenState extends State<SetDailyMoverScreen> {
           Text.rich(textAlign : TextAlign.center,
               TextSpan(
                   text: '1 ',
-                  style: styleSmall1.copyWith(color: const Color(0xffED7844),fontWeight: FontWeight.w500),
+                  style: styleSmall1.copyWith(color: const Color(0xffED7844),
+                      fontWeight: FontWeight.w500),
                   children: <InlineSpan>[
                     TextSpan(
                       text: 'per day for the first ',
-                      style: styleSmall1.copyWith(color:  data ?? false ?  Colors.black : Color(0xffA9A9A9),fontWeight: FontWeight.w500),
+                      style: styleSmall1.copyWith(color:  data ?? false ?  Colors.black : const Color(0xffA9A9A9),
+                          fontWeight: FontWeight.w500),
                     ),
                     TextSpan(
                       text: '14\n',
-                      style: styleSmall1.copyWith(color: Color(0xffED7844),fontWeight: FontWeight.w500),
+                      style: styleSmall1.copyWith(color: const Color(0xffED7844),fontWeight: FontWeight.w500),
                     ),
                     TextSpan(
                       text: 'days then ',
-                      style: styleSmall1.copyWith(color:  data ?? false ?  Colors.black : Color(0xffA9A9A9),fontWeight: FontWeight.w500),
+                      style: styleSmall1.copyWith(color:  data ?? false ?  Colors.black : const Color(0xffA9A9A9),fontWeight: FontWeight.w500),
                     ),
                     TextSpan(
                       text: '2 ',
-                      style: styleSmall1.copyWith(color: Color(0xffED7844),fontWeight: FontWeight.w500),
+                      style: styleSmall1.copyWith(color: const Color(0xffED7844),fontWeight: FontWeight.w500),
                     ),
                     TextSpan(
                       text: 'per day ',
-                      style: styleSmall1.copyWith(color:  data ?? false ?  Colors.black : Color(0xffA9A9A9),fontWeight: FontWeight.w500),
+                      style: styleSmall1.copyWith(color:  data ?? false ?  Colors.black : const Color(0xffA9A9A9),fontWeight: FontWeight.w500),
                     ),
                   ]
               )
@@ -193,7 +196,7 @@ class _SetDailyMoverScreenState extends State<SetDailyMoverScreen> {
           Text('Here your can set your\nown daily active breaks\nprogram',
             textAlign: TextAlign.center,
             style: styleSmall1.copyWith(color:
-            data ?? false ?  Colors.black : Color(0xffA9A9A9),fontWeight: FontWeight.w400),),
+            data ?? false ?  Colors.black : const Color(0xffA9A9A9),fontWeight: FontWeight.w400),),
 
           const SizedBox(height: 20,),
         ],),),
@@ -219,10 +222,10 @@ class _SetDailyMoverScreenState extends State<SetDailyMoverScreen> {
     return ButtonView("Continue", () {
 
       if(recoomeded?.value ?? false){
-        Navigator.push(context, CupertinoPageRoute(builder: (context) => RecommendedTimeScreen()));
+        Navigator.push(context, CupertinoPageRoute(builder: (context) => const RecommendedTimeScreen()));
       }
       else if(custome?.value ?? false){
-        Navigator.push(context, CupertinoPageRoute(builder: (context) => CustomeTimeScreen()));
+        Navigator.push(context, CupertinoPageRoute(builder: (context) => const CustomTimeScreen()));
       }
 
     });

@@ -29,7 +29,7 @@ class ApiProvider {
   Future<Response?> customTimeAPI(Map<String,dynamic>? data) async {
     Response? response;
     try {
-      _dio.options.headers['Authorization'] = "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzNTg4MzY4LCJpYXQiOjE2OTM1NDUxNjgsImp0aSI6IjMyOTYyMjcyNTQyMDRiZDQ4NzBjNzdlYmNiZWNiMzA5IiwidXNlcl9pZCI6IjBjZmQ5ZTYyLTlhMDItNGRkOC04M2Q0LWNhM2I3ZWU5NzdmYyIsImVtYWlsIjoicGFscy50Y2xlQGdtYWlsLmNvbSJ9.hITrxvzoo_IEIPF5Ss40dRJSFOoOrk9xr7LGcB8qu48";
+      _dio.options.headers['Authorization'] = "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkzNjExNDY4LCJpYXQiOjE2OTM1NjgyNjgsImp0aSI6IjQwODI3NTk0MmRhZDRiYmQ5YWMyYzczOGYxZmE4OTFjIiwidXNlcl9pZCI6IjBjZmQ5ZTYyLTlhMDItNGRkOC04M2Q0LWNhM2I3ZWU5NzdmYyIsImVtYWlsIjoicGFscy50Y2xlQGdtYWlsLmNvbSJ9.8V9-762cnLj6pU2KhYvpLgK09rYvO7Eb8_KjnfLWA_0";
 
       _dio.interceptors.add(AwesomeDioInterceptor(
           logRequestTimeout: true,

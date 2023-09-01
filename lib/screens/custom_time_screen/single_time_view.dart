@@ -4,7 +4,6 @@ import 'package:day_night_time_picker/lib/constants.dart';
 import 'package:day_night_time_picker/lib/daynight_timepicker.dart';
 import 'package:day_night_time_picker/lib/state/time.dart';
 import 'package:exercise_app/model/time_pick_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rxdart/rxdart.dart';
@@ -19,7 +18,7 @@ class SingleTimeView extends StatefulWidget {
   final Function(TimePickModel)? selectedTimeCallBack;
   final int? index;
 
-  SingleTimeView({this.index,this.selectedTimeCallBack,super.key});
+  const SingleTimeView({this.index,this.selectedTimeCallBack,super.key});
 
   @override
   State<SingleTimeView> createState() => _SingleTimeViewState();
@@ -39,10 +38,10 @@ class _SingleTimeViewState extends State<SingleTimeView> {
 
   @override
   Widget build(BuildContext context) {
-    return selectCustomeBox();
+    return selectCustomBox();
   }
 
-  Widget  selectCustomeBox(){
+  Widget  selectCustomBox(){
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(decoration: BoxDecoration(color: boxColor,
@@ -116,17 +115,14 @@ class _SingleTimeViewState extends State<SingleTimeView> {
     return  InkWell(onTap: ()  {
       setState(()  {
 
-        /*Navigator.push(context, MaterialPageRoute(builder:
-            (context) => timePicker((p0) => timePicker((p0) {
-              hrs = p0.hour.toString();
-              min = p0.minute.toString();
-            },)) ));*/
+
 
         Navigator.of(context).push(
           showPicker(
             key: UniqueKey(),
             context: context,
-            value: selectTime?.value ?? Time(hour: selectTime?.value.hour ?? 7, minute: selectTime?.value.minute ??00),
+            value: selectTime?.value ?? Time(hour: selectTime?.value.hour ?? 7,
+                minute: selectTime?.value.minute ??00),
             onChange: onTimeChanged,
             minuteInterval: TimePickerInterval.FIVE,
             onChangeDateTime: (DateTime dateTime) {
@@ -136,9 +132,6 @@ class _SingleTimeViewState extends State<SingleTimeView> {
           )
         );
 
-
-
-        // showDayNightPickerWidget();
 
       });
     },
@@ -178,8 +171,6 @@ class _SingleTimeViewState extends State<SingleTimeView> {
 
   void onTimeChanged(Time newTime) {
     setState(() {
-      // widget.time.call(newTime);
-      // defaultTime = newTime;
       selectTime?.add(newTime);
       timePickModel?.time = '${selectTime?.value.hour}:${selectTime?.value.minute}';
       widget.selectedTimeCallBack?.call(timePickModel ?? TimePickModel());
